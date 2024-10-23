@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en Seminarios</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 800px; /* Limitar el ancho máximo */
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%; /* Ocupa todo el ancho */
+            margin-bottom: 20px; /* Espacio entre tablas */
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        th {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        button {
+            background-color: #ff5722; /* Color del botón */
+            color: white; /* Color del texto del botón */
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1.2em;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #e64a19; /* Color del botón al pasar el ratón */
+        }
+    </style>
+</head>
+<body>
+    <h1>Registro en Seminarios</h1>
+    <div class="container">
+        <form method="POST">
+            <table>
+                <tr>
+                    <th colspan="2">Datos Personales</th>
+                </tr>
+                <tr>
+                    <td><label for="fecha">Fecha:</label></td>
+                    <td><input type="date" id="fecha" name="fecha" required></td>
+                </tr>
+                <tr>
+                    <td><label for="nombre">Nombre:</label></td>
+                    <td><input type="text" id="nombre" name="nombre" required></td>
+                </tr>
+                <tr>
+                    <td><label for="apellido">Apellido:</label></td>
+                    <td><input type="text" id="apellido" name="apellido" required></td>
+                </tr>
+                <tr>
+                    <td><label for="turno">Turno:</label></td>
+                    <td>
+                        <input type="radio" id="mañana" name="turno" value="Mañana" required>
+                        <label for="mañana">Mañana</label>
+                        <input type="radio" id="tarde" name="turno" value="Tarde">
+                        <label for="tarde">Tarde</label>
+                        <input type="radio" id="noche" name="turno" value="Noche">
+                        <label for="noche">Noche</label>
+                    </td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <th colspan="2">Seminarios Disponibles</th>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="ia" name="seminarios" value="Inteligencia Artificial">
+                        <label for="ia">Inteligencia Artificial</label><br>
+                        <input type="checkbox" id="ml" name="seminarios" value="Machine Learning">
+                        <label for="ml">Machine Learning</label><br>
+                        <input type="checkbox" id="simulacion" name="seminarios" value="Simulación con Arena">
+                        <label for="simulacion">Simulación con Arena</label><br>
+                        <input type="checkbox" id="robotica" name="seminarios" value="Robótica Educativa">
+                        <label for="robotica">Robótica Educativa</label><br>
+                    </td>
+                </tr>
+            </table>
+
+            <button type="submit">Enviar registro</button>
+        </form>
+    </div>
+</body>
+</html>
